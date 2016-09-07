@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/src/main/res/layout/list_item.xml"
+    },
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/src/main/res/layout/list_item.xml"
+    },
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/build/intermediates/res/merged/debug/layout/fragment_layout.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/src/main/res/layout/fragment_layout.xml"
+    },
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/TabFragmentTabHost/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/build/intermediates/res/merged/debug/layout/fragment_layout.xml",
+        "source": "/Users/zhangzhongqi/Documents/AndroidSpace/Tab_FragmentTabHost1/app/src/main/res/layout/fragment_layout.xml"
+    }
+]
