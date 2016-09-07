@@ -4,26 +4,34 @@ FragmentTabHost的简单使用
 实现Imageview 和Textview 组合的tab点击切换功能，
 
 布局文件
+
+
  <android.support.v4.app.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/master_white_color">
-
+        
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="0" />
     </android.support.v4.app.FragmentTabHost>
-
+    
     <FrameLayout
         android:id="@+id/realtabcontent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
         
+        
+
+
+
 在activity中相应的处理：
+
+
 public class ListActivity extends BaseActivity {
     public static final int INDEX_ALL_ORDER = 2;
     private String mTextviewArray[] = {"首页", "发现", "我"};   // 这里的值可根据需求自己添加
@@ -33,7 +41,7 @@ public class ListActivity extends BaseActivity {
     private Class fragmentArray[] = {ListFragment.class, ListFragment
             .class, ListFragment.class};
     private int autoID = 0;
-
+    
     @Override
     protected void getBundle() {
         Bundle bundle = getIntent().getExtras();
@@ -42,7 +50,7 @@ public class ListActivity extends BaseActivity {
         }
         super.getBundle();
     }
-
+    
     @Override
     protected void initView() {
         super.initView();
@@ -61,9 +69,8 @@ public class ListActivity extends BaseActivity {
         mTabHost.setCurrentTabByTag(mTextviewArray[autoID]);
         updateTab(mTabHost);
         mTabHost.setOnTabChangedListener(new OnTabChangedListener());
-
     }
-
+    
     private View getTabItemView(int index) {
         View view = layoutInflater.inflate(R.layout.tab_item_view, null);
         View vi = view.findViewById(R.id.vi);
@@ -72,7 +79,11 @@ public class ListActivity extends BaseActivity {
         textView.setText(mTextviewArray[index]);
         return view;
     }
+    
+    
   // TextView与ImageView的组合，切换页面选中与不选中的逻辑
+  
+  
     private void updateTab(final TabHost tabHost) {
         for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
             View vi = tabHost.getTabWidget().getChildAt(i).findViewById(R.id.vi);
@@ -87,10 +98,9 @@ public class ListActivity extends BaseActivity {
             }
         }
     }
-
+    
+    
     class OnTabChangedListener implements TabHost.OnTabChangeListener {
-
-
         @Override
         public void onTabChanged(final String tabId) {
             mTabHost.setCurrentTabByTag(tabId);
