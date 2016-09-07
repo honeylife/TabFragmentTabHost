@@ -1,11 +1,10 @@
 # TabFragmentTabHost
-FragmentTabHost的简单使用
+#FragmentTabHost的简单使用
 
-实现Imageview 和Textview 组合的tab点击切换功能，
+*实现Imageview 和Textview 组合的tab点击切换功能，
 
-布局文件
-
-
+#布局文件
+```xml
  <android.support.v4.app.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
@@ -24,14 +23,10 @@ FragmentTabHost的简单使用
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-        
-        
+```
+# 在activity中相应的处理：
 
-
-
-在activity中相应的处理：
-
-
+```java
 public class ListActivity extends BaseActivity {
     public static final int INDEX_ALL_ORDER = 2;
     private String mTextviewArray[] = {"首页", "发现", "我"};   // 这里的值可根据需求自己添加
@@ -79,11 +74,7 @@ public class ListActivity extends BaseActivity {
         textView.setText(mTextviewArray[index]);
         return view;
     }
-    
-    
   // TextView与ImageView的组合，切换页面选中与不选中的逻辑
-  
-  
     private void updateTab(final TabHost tabHost) {
         for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
             View vi = tabHost.getTabWidget().getChildAt(i).findViewById(R.id.vi);
@@ -98,8 +89,6 @@ public class ListActivity extends BaseActivity {
             }
         }
     }
-    
-    
     class OnTabChangedListener implements TabHost.OnTabChangeListener {
         @Override
         public void onTabChanged(final String tabId) {
@@ -107,6 +96,5 @@ public class ListActivity extends BaseActivity {
             updateTab(mTabHost);
         }
     }
-
 }
-
+```
